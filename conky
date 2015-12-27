@@ -1,0 +1,53 @@
+alignment top_right
+background yes
+use_xft yes
+xftfont bitstream vera:size=10
+xftalpha 1
+update_interval 0.5
+total_run_times 0
+own_window yes
+own_window_colour 000000
+own_window_type normal
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+transparency 100
+enable_transparency true
+double_buffer yes
+minimum_size 0 0
+maximum_width 250
+draw_shades no
+draw_outline no
+draw_borders no
+border_width 0
+border_margin 0
+draw_graph_borders no
+default_color 00ffff
+color1 00ffff
+color2 FF0000
+color3 00ffff
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+net_avg_samples 2
+override_utf8_locale no
+short_units yes
+gap_x 18
+gap_y 18
+# Lua Load  #
+lua_load ~/.conky/clock_rings.lua
+lua_draw_hook_pre clock_rings
+
+own_window_argb_value 0
+own_window_argb_visual no
+TEXT
+${image ~/.conky/Conkyku/darkcode.png -p 43,93 -s 103x103}
+${color2}${voffset 6}${font OpenLogos:size=50}E${font TimesNewRoman :size=18}Kali Rolling${color2}${voffset 6}${font OpenLogos:size=50}E${font}
+--------------------------------------------------------
+${voffset 16}${font Dustismo roman:size=9}${color2}${alignc 60}${time %A}${font}
+${voffset -4}${font DroidSansFallback:bold:size=16}${if_match ${time %e}<=9}${color1}${alignc 65}${time %e}${font}${else}${if_match ${time %e}>=10}${color1}${alignc 60}${time %e}${endif}${endif}${font}
+${voffset 0}${font Dustismo roman:size=9}${color2}${alignc 60}${time %B}${font}
+${voffset 0}${font Dustismo roman:size=9}${color2}${alignc 60}${time %Y}${font}
+####
+## Uncomment for Conky 1.8.0 (use mono fonts only)
+${voffset -75}${font DroidSansMono:size=8}${color2}${execpi 60 VinDSL_Cal_9=`date +%-d`; cal -h | sed -e 's/\r//g' -e 's/^/ /g' -e '1d' -e s/^/"\$\{offset 100"\}/ -e 's/\<'"$VinDSL_Cal_9"'\>/${color1}&${color2}/'}
+--------------------------------------
