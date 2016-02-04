@@ -1,0 +1,407 @@
+Copyright ©2010 http://www.vavai.com
+Halaman 1 dari 21 Halaman
+MIGRASI WINDOWS-LINUX SERVER
+MENGGUNAKAN DISTRO LINUX
+OPENSUSE
+EXCELLENT INFOTAMA KREASINDO
+http://www.vavai.biz , Email : vavai@vavai.com
+Perum Duren Jaya Jl. Candi Mendut Raya C. 328 Bekasi 17111
+Panduan Instalasi openSUSE 11.2 untuk ServerCopyright ©2010 http://www.vavai.com
+Halaman 2 dari 21 Halaman
+Panduan Instalasi openSUSE 11.2
+versi Server Berbasis GUI
+Masim “Vavai” Sugianto
+http://www.vavai.com
+http://www.vavai.biz
+http://www.opensuse.or.id
+vavai@vavai.com
+Bekasi, 19 Maret 2010, 10:52
+Dedicated to :
+My Lovely Renny “Dear Rey” Yuniastuty
+Muhammad “Zeze Vavai” Rivai Alifianto
+My Young Brother & Sister, “Mamang” Maryadi Arismunandar, Dewi “Dew-Dew” Lia Astuti &
+Keponakan-Keponakan...
+**************************************************************
+Rumahku entah dimana,
+Tak kutemukan di sajak-sajak
+Di matahari dan di bulan
+Karena tidurku di bawah bintang-bintang
+Jauh di rimba belantara,
+Tenggelam ke dasar lautan
+Mesti pulang kemana
+Setelah letih mengembara
+Herry H Haris, Balada Si Roy
+**************************************************************
+Lisensi Dokumen:
+Copyright ©2010 http://www.vavai.com
+Dokumen ini dapat digunakan, dimodifikasi dan disebarkan secara bebas & luas untuk
+tujuan non komersial (non profit), dengan syarat tidak menghilangkan keterangan
+mengenai penulis dan lisensi yang
+disertakan dalam setiap dokumen. Tidak
+diperbolehkan melakukan penulisan ulang, kecuali mendapatkan ijin terlebih dahulu dari
+http://www.vavai.com
+Mari bersatu memajukan Indonesia !!
+(*) Dokumen ini dibuat menggunakan aplikasi open
+(http://www.openoffice.org) versi 3.1.1 pada OpenSUSE 11.2
+source
+Panduan Instalasi openSUSE 11.2 untuk Server
+Open
+Office
+WriterCopyright ©2010 http://www.vavai.com
+Halaman 3 dari 21 Halaman
+PROLOG
+Panduan ini akan menitikberatkan penggunaan tampilan GUI untuk manajemen server. Saya
+memahami
+sepenuhnya
+bahwa
+sistem
+yang
+didedikasikan
+untuk
+server
+sebaiknya
+menggunakan konfigurasi seminimal mungkin dan direkomendasikan untuk menggunakan
+tampilan Text Mode. Meski demikian, atas pertimbangan kemudahan migrasi, pemahaman
+pengguna dan adaptasi selama proses transisi, saya memutuskan untuk menggunakan
+tampilan GUI, meski semua caranya bisa dilakukan melalui tampilan konsole/text mode.
+Penggunaan GUI ini diharapkan dapat membantu para pemula, terutama para Administrator
+Windows yang berniat melakukan migrasi sistem ke Linux namun masih belum terbiasa dengan
+konfigurasi berbasis teks.
+Panduan ini menggunakan distro Linux openSUSE 11.2 namun bisa digunakan dengan sedikit
+modifikasi dan perubahan jika diterapkan pada openSUSE 11.0, 11.1, 11.3 maupun SUSE Linux
+Enterprise Server 11.
+Instalasi openSUSE bisa dilakukan dengan berbagai cara, baik menggunakan CD, DVD, file
+ISO, melalui jaringan dan lain sebagainya. Panduan ini akan menggunakan instalasi berbasis
+DVD. Instalasi berbasis jaringan, file iso atau media instalasi lainnya akan dibahas pada bab
+terpisah.
+PROSES INSTALASI
+1) Dapatkan DVD Instalasi openSUSE 11.2, baik dengan cara download dan
+melakukan burning DVD maupun dengan cara membelinya melalui toko-toko
+online yang menjual CD/DVD Linux. Berbeda dengan CD/DVD Windows yang
+terlarang untuk dijual secara bebas tanpa lisensi resmi karena berarti ilegal, CD
+dan DVD Linux openSUSE boleh diperjual belikan secara legal dengan biaya yang
+relatif murah. DVD Instalasi openSUSE misalnya, bisa didapatkan mulai dari harga
+Rp. 10.000,- sampai dengan Rp. 50.000,- tergantung kemasan, support dan
+kesepakatan sebelumnya.
+2) Jika menginginkan untuk burning file iso menjadi DVD, file iso instalasi openSUSE
+dapat didownload pada beberapa alamat berikut ini :
+◦
+http://kambing.ui.ac.id/iso/opensuse/11.2/
+Panduan Instalasi openSUSE 11.2 untuk ServerCopyright ©2010 http://www.vavai.com
+◦
+Halaman 4 dari 21 Halaman
+http://mirror1.opensuse.or.id/distribution/11.2/iso/
+Pilih versi DVD yang sesuai dengan arsitektur processor yang digunakan.
+Sebagai catatan, file yang mengandung tulisan ix86 (i386, i486, i586, i686) berarti
+diperuntukkan bagi processor 32 bit sedangkan untuk file yang mengandung tulisan
+x86_64 diperuntukkan bagi komputer yang memiliki processor 64 bit.
+Burning file iso tersebut menggunakan aplikasi burner DVD, misalnya Nero
+Burning ROM pada sistem Windows atau K3B atau Brasero pada sistem Linux.
+3) Boot komputer dengan posisi CDROM/DVD ROM sebagai pilihan pertama pada
+boot device priority di BIOS
+4) Pilih Installation. Pada pilihan ini, kita dapat mengubah pilihan bahasa untuk
+instalasi, ukuran layar, lokasi sumber instalasi (DVD atau melalui network), pilihan
+kernel dan tambahan driver. Karena menggunakan DVD, kita bisa langsung
+memilih kondisi default dengan menekan tombol ENTER.
+5) Kita akan masuk ke posisi Welcome Screen yang menampilkan openSUSE
+License Agreement. Perhatikan bahwa openSUSE tidak meminta kita setuju atau
+Panduan Instalasi openSUSE 11.2 untuk ServerCopyright ©2010 http://www.vavai.com
+Halaman 5 dari 21 Halaman
+tidak seperti halnya instalasi Windows. Ini karena openSUSE bersifat bebas dan
+gratis untuk dipergunakan. Tampilan license agreement berisi informasi distro
+Linux dan peran komunitas dalam proses pembuatannya. Kita bisa langsung
+memilih tombol Next.
+6) openSUSE akan melakukan analisa sistem, deteksi hardware dan spesifikasi
+sistem yang ada. Tunggu sebentar hingga proses deteksi selesai dilakukan.
+7) Pilihan berikutnya adalah pilihan instalasi, apakah berupa Instalasi Baru, Update
+atau Perbaikan Instalasi Sebelumnya. Jika harddisk yang dipergunakan sudah
+memiliki sistem openSUSE, pilihan update atau repair secara otomatis akan
+diaktifkan. Karena proses ini merupakan instalasi awal, pilih New Installation.
+Panduan Instalasi openSUSE 11.2 untuk ServerCopyright ©2010 http://www.vavai.com
+Halaman 6 dari 21 Halaman
+8) Berikutnya adalah menentukan waktu dan area waktu (Time Zone). Pilih Asia
+Jakarta jika memang tinggal didaerah WIB dan pilih area lokasi lain jika tinggal di
+area waktu WITA/WIT
+9) Pilihan berikutnya adalah menentukan desktop manager. Tersedia berbagai
+pilihan, baik Gnome, KDE 3.5, KDE 4 maupun yang lain (XFCE, minimal system
+dll). Sesuai dengan judul panduan ini, saya memilih untuk menggunakan Gnome
+Desktop Manager sebagai desktop manager. Anda bisa
+memilih
+untuk
+menggunakan Minimal Server Selection jika memang sudah terbiasa dengan
+konfigurasi berbasis teks.
+Pada dasarnya, pemilihan desktop manager adalah preferensi pribadi masing-
+masing. Anda bebas dan boleh memilih desktop manager yang paling nyaman
+untuk dipergunakan. Secara prinsip perbedaan masing-masing desktop manager
+terletak pada tampilan dan sistem menu. Bisa saja aplikasi KDE dijalankan pada
+desktop manager Gnome atau sebaliknya.
+Munculnya banyak desktop manager di Linux merupakan buah dari kebebasan
+untuk memilih preferensi yang paling diinginkan. Saya memilih Gnome meski tetap
+Panduan Instalasi openSUSE 11.2 untuk ServerCopyright ©2010 http://www.vavai.com
+Halaman 7 dari 21 Halaman
+sering menggunakan KDE. Analogikan pemilihan desktop manager ini dengan
+pemilihan social media, misalnya saya tetap menggunakan Twitter meski juga
+menggunakan Facebook.
+10) Setelah menentukan Desktop Manager, tahap selanjutnya adalah menentukan
+formasi harddisk. Jika sudah memiliki data pada harddisk, tahap ini adalah tahap
+yang perlu perhatian extra agar jangan sampai data yang sudah ada termasuk
+kedalam bagian yang akan diformat. openSUSE memiliki kemampuan mendeteksi
+partisi Windows dan partisi Linux lainnya dan menjaga agar data tersebut tidak
+hilang. Meski demikian, sangat disarankan untuk melakukan backup data terlebih
+dahulu
+Secara default biasanya openSUSE memberikan kapasitas besar untuk /home.
+Saran saya, sebaiknya ubah formasi ini dengan cara memilih partisi / (partisi root)
+yang lebih besar daripada /home karena / akan menjadi folder utama dan
+melakukan resize ukuran / jauh lebih sulit daripada melakukan resize ukuran partisi
+lain. Sebagai contoh, untuk harddisk 80 GB, saya akan memilih 50 GB untuk root
+(/), 1.5 GB untuk Swap dan sisanya untuk /home.
+Panduan Instalasi openSUSE 11.2 untuk ServerCopyright ©2010 http://www.vavai.com
+Halaman 8 dari 21 Halaman
+Jika sistem sudah didedikasikan secara khusus untuk aplikasi tertentu, misalnya
+untuk Zimbra mail server yang menyimpan semua data pada folder /opt, kita tidak
+perlu membuat partisi /home secara terpisah karena yang dibutuhkan justru
+partisi /opt.
+Jika kita tidak membuat suatu partisi secara terpisah, semua partisi akan
+diletakkan didalam folder /. Jika menggunakan kapasitas harddisk terbatas,
+misalnya hanya 20 atau 40 GB, saya lebih menyarankan untuk hanya membuat
+partisi / dan swap, karena kalau dipisah kedalam beberapa partisi akan
+mengurangi kapasitas maksimum masing-masing partisi.
+Ada beberapa saran yang menganjurkan untuk memisahkan partisi sistem tertentu
+(misalnya /var, /srv dll) kedalam partisi terpisah. Jika memiliki harddisk yang
+berbeda, saran ini bisa diadopsi untuk meningkatkan kecepatan proses, namun
+jika menggunakan harddisk yang sama, saya lebih menyarankan untuk tetap
+memilih formasi seperti diatas.
+Banyak juga yang menyarankan ukuran swap 2.5X memory fisik. Hal ini tidak
+sepenuhnya benar karena swap sebenarnya hanya memory buffer atau cadangan
+dan tidak akan digunakan jika memory fisik sudah cukup besar. Penggunaan swap
+juga akan memperlambat proses sistem sehingga swap merupakan cadangan
+darurat saja. Jika swap terpakai cukup besar, itu sudah merupakan tanda bahwa
+memory fisik harus ditingkatkan.
+Dalam banyak sistem, ukuran swap sebesar 1-1.5 GB untuk memory >= 1 GB
+sudah cukup sesuai sebagai antisipasi.
+Jika kita memiliki 2 harddisk atau lebih, kita bisa menerapkan sistem raid untuk
+perlindungan data. Raid adalah mekanisme penggunaan sistem yang menyatukan
+harddisk kedalam 1 logical partisi. Penjelasan lebih jauh mengenai raid akan
+dibahas dalam bab/artikel terpisah.
+Secara prinsip, jika kita membuat partisi / dalam jumlah yang cukup, kita bisa
+dengan mudah menambahkan kapasitas harddisk untuk dijadikan atau dimount
+sebagai partisi tertentu jika memang diperlukan.
+Untuk mengubah formasi partisi, kita bisa memilih menu Edit Partition Setup
+Panduan Instalasi openSUSE 11.2 untuk ServerCopyright ©2010 http://www.vavai.com
+Halaman 9 dari 21 Halaman
+11) Tahap berikutnya adalah menentukan nama user dan password sistem. Untuk
+kemudahan, kita bisa menggunakan password user sebagai password system
+administrator (root)
+Panduan Instalasi openSUSE 11.2 untuk ServerCopyright ©2010 http://www.vavai.com
+Halaman 10 dari 21 Halaman
+12) Sebelum proses instalasi dilakukan, ada overview mengenai pilihan yang sudah
+dilakukan. Kita masih bisa melakukan perubahan dari halaman overview ini.
+Halaman ini bisa dianalogikan sebagai final confirmation.
+Kita akan mengurangi software yang diinstall karena sistem ini diperuntukkan
+sebagai server dan kita tidak memerlukan aplikasi yang aneh-aneh (dalam arti,
+aplikasi multimedia tidak kita perlukan di server, kecuali kita jadi Admin yang
+nyleneh yang melakukan konfigurasi sambil memutar film :-P
+13) Klik pada group Software
+14) Klik pada Gnome Desktop Environment hingga tanda centangnya hilang. Ini
+memastikan bahwa Gnome Desktop tidak akan diinstall (lho, kalau begitu buat apa
+kita memilih Gnome Desktop diawal tadi ??? Sabar, jangan marah dulu :-P )
+15) Klik pada pilihan Gnome Base System. Ini akan memastikan bahwa kita
+melakukan instalasi Gnome basis, bukan Gnome Desktop full. Gnome basis bisa
+menghemat hingga sekitar 500 MB jika dibandingkan dengan Gnome Desktop full
+16) Klik pada Novell AppArmor hingga warna centangnya berubah dari warna hijau
+menjadi warna hitam. Ini berarti bahwa Novell Apparmor tidak akan diaktifkan
+namun tidak bisa semuanya dihilangkan karena ada paket depedency. It's OK.
+17) Klik OK
+18) Scroll ke bagian paling bawah dari halaman Installation Setting. Klik link Disable
+pada tulisan “Firewall will be enabled”. Untuk menghindari kemungkinan adanya
+service yang bermasalah dengan konfigurasi setup firewall, firewall akan dimatikan
+pada saat instalasi dan konfigurasi sampai nanti waktunya akan diaktifkan jika
+server sudah selesai disetup dan siap untuk dipergunakan sebagai server
+production.
+19) Periksa sekali lagi apakah ada setting tertentu yang ingin diganti. Jika sudah OK
+semua, silakan klik tombol Install.
+Panduan Instalasi openSUSE 11.2 untuk ServerCopyright ©2010 http://www.vavai.com
+Halaman 11 dari 21 Halaman
+20) Tahap terakhir adalah proses konfigurasi secara otomatis untuk menentukan
+resolusi layar dan konfigurasi hardware lainnya.
+Panduan Instalasi openSUSE 11.2 untuk ServerCopyright ©2010 http://www.vavai.com
+Halaman 12 dari 21 Halaman
+21) Setelah proses ini selesai, kita bisa menggunakan openSUSE 11.2 dengan
+leluasa.
+KONFIGURASI NETWORK
+Setelah server selesai diinstall, silakan login dengan menggunakan user yang sudah
+didefinisikan pada saat instalasi. Jika pada saat instalasi memilih opsi “auto login”, posisi saat ini
+semestinya sudah login sebagai user.
+Langkah pertama yang perlu dilakukan adalah setup konfigurasi jaringan. Untuk melakukannya,
+lakukan langkah sebagai berikut :
+1. Klik START Menu (COMPUTER) kemudian klik YAST. YAST adalah tools konfigurasi
+openSUSE yang sangat powerful yang akan banyak digunakan pada tutorial
+selanjutnya.
+2. Pilih Network Device | Network Setting
+Panduan Instalasi openSUSE 11.2 untuk ServerCopyright ©2010 http://www.vavai.com
+Halaman 13 dari 21 Halaman
+3. Pilih network yang hendak dikonfigurasi, misalnya eth0, kemudian klik Edit
+4. Masukkan IP Address dan Subnet mask. openSUSE mendukung penulisan subnet
+mask dalam format simple, misalnya 255.255.255.0 bisa ditulis /24 . Hostname tidak
+usah diisi. Klik Next.
+5. Pindah ke tab Hostname & DNS
+6. Isi hostname, domain dan NS. Gunakan pola sebagai berikut :
+Hostname : Nama komputer server, misalnya server
+Domain : Fully Qualified Domain Name, misalnya vavai.com
+Name Server1 : IP Address DNS lokal. Bisa diisi dengan IP Address server jika server
+nantinya bertindak sebagai DNS Server
+Name Server 2 : IP Address router/Modem ADSL
+Name Server 3 : IP Address DNS ISP/Public DNS. 8.8.8.8 adalah IP Address public
+DNS milik Google
+Panduan Instalasi openSUSE 11.2 untuk ServerCopyright ©2010 http://www.vavai.com
+Halaman 14 dari 21 Halaman
+7. Pindah ke tab Routing
+8. Isikan IP Address router/modem ADSL pada isian gateway. Dalam contoh modem
+ADSL saya memiliki IP 192.168.0.5
+Panduan Instalasi openSUSE 11.2 untuk ServerCopyright ©2010 http://www.vavai.com
+Halaman 15 dari 21 Halaman
+9. Klik OK
+Dengan formasi diatas, semestinya sudah bisa mengakses internet (jika memang akses
+internetnya berjalan dengan baik dan sudah bayar tagihan bulanan, hehehe...)
+KONFIGURASI APLIKASI PENTING
+Saat nantinya menggunakan server berbasis openSUSE, ada beberapa aplikasi penting yang
+akan digunakan. Untuk memudahkan pemakaiannya, berikut adalah beberapa aplikasi yang
+sebaiknya ditempatkan pada menu utama. Silakan tambahkan aplikasi lain jika memang
+diperlukan :
+•
+YAST. Tidak perlu ditambahkan karena sudah ada pada sisi kanan (menu sistem) menu
+utama
+• konsole/terminal untuk konfigurasi berbasis teks
+• Nautilus sebagai file manager atau Windows Explorer-nya Linux
+• Gedit untuk editor berbasis teks
+• Browser Mozilla Firefox
+• Aplikasi lain jika memang diperlukan, misalnya VirtualBox, VMWare atau aplikasi built-in
+tertentu lainnya.
+Untuk menambahkan aplikasi tersebut, lakukan langkah sebagai berikut :
+1. Klik Start menu
+2. Klik tombol More Application. Kalau tombol ini tidak ada (misalnya malah berganti jadi
+More Place, itu berarti anda tidak berada dalam tab Application. Perhatikan tab yang
+ada dibagian atas Start Menu)
+3. Pilih aplikasi yang ingin ditambahkan, klik kanan pada aplikasi tersebut kemudian pilih
+menu Add to Favorites. Untuk memudahkan pencarian aplikasi, ketik saja nama
+aplikasi pada kotak pencarian disisi kiri
+Panduan Instalasi openSUSE 11.2 untuk ServerCopyright ©2010 http://www.vavai.com
+Halaman 16 dari 21 Halaman
+4. Lakukan hal yang sama untuk semua aplikasi yang disebutkan diatas
+KONFIGURASI REPOSITORI
+Repositori adalah sumber aplikasi/paket aplikasi yang akan diinstall. Jika Windows
+menggunakan CD instalasi, Linux menggunakan repositori untuk memudahkan proses instalasi
+aplikasi tertentu.
+openSUSE mendukung berbagai jenis protokol jaringan dan media sebagai media repositori. Hal
+ini sangat memudahkan penggunaan openSUSE sebagai server karena kita bisa dengan
+leluasa memilih berbagai pilihan penggunaan repositori.
+Cara termudah menggunakan repositori adalah menggunakan CD/DVD instalasi. Hanya saja,
+cara ini memiliki kelemahan, misalnya jika CD/DVD tergores, data tidak bisa diakses. Bisa juga
+proses instalasi menggunakan CD/DVD pinjaman sehingga tidak bisa dipakai seterusnya.
+Untuk mengantisipasi hal ini, kita bisa menyalin seluruh isi DVD kedalam suatu folder dan
+menggunakannya sebagai media repositori. Pilihan lain adalah menggunakan repositori online,
+namun hal ini akan membutuhkan akses internet dan kecepatan aksesnya sangat bergantung
+pada kecepatan akses internet yang dimiliki.
+Untuk melakukan setup repositori menggunakan folder lokal, berikut adalah panduannya :
+Panduan Instalasi openSUSE 11.2 untuk ServerCopyright ©2010 http://www.vavai.com
+Halaman 17 dari 21 Halaman
+Menyalin Isi DVD
+1. Bukan Nautilus file manager
+2. Buat folder untuk menampung isi DVD, misalnya folder /home/vavai/11.2/. Sesuaikan
+dengan folder yang anda miliki.
+3. Masukkan DVD
+4. Klik DVD dan salin semua isinya dengan memilih menu Edit | Select All, Edit | Copy
+(CTRL A, CTRL C)
+5. Buka folder yang baru dibuat
+6. Klik menu Edit | Paste (CTRL V)
+7. Tunggu hingga semua isi DVD selesai disalin
+Mengaktifkan Repositori
+1. Buka menu utama | YAST
+2. Pilih menu Software | Software Repositories
+3. Non aktif semua repo yang ada, baik repo online maupun repo DVD
+Panduan Instalasi openSUSE 11.2 untuk ServerCopyright ©2010 http://www.vavai.com
+Halaman 18 dari 21 Halaman
+4. Klik Add
+5. Pilih Local Directory, klik Next
+6. Masukkan nama repository pada Repository Name, dan nama folder berisi isi DVD
+pada isian Path to Directory. Biarkan tanda centang pada Plain RPM Directory tidak
+Panduan Instalasi openSUSE 11.2 untuk ServerCopyright ©2010 http://www.vavai.com
+Halaman 19 dari 21 Halaman
+dipilih
+7. Klik Next
+8. Klik OK
+Bagi anda para penggemar akses melalui konsole/terminal, penambahan repo diatas bisa
+dilakukan dengan cara singkat sebagai berikut :
+1. Buka konsole/terminal
+2. Ketik perintah berikut :
+su
+zypper ar /home/vavai/11.2/ lokal
+zypper ref && zypper up
+Pada tutorial selanjutnya, kita akan banyak berkenalan dengan akses via konsole sebagai
+adaptasi pada konfigurasi berbasis teks. Seperti bisa dilihat pada contoh diatas, pada banyak
+kasus, akses melalui konsole dapat mempersingkat proses konfigurasi. Tidak usah khawatir,
+openSUSE menyediakan versi konsole maupun GUI yang membuat hidup para Admin Linux
+lebih mudah untuk dijalani :-)
+*****
+Epilog
+<*> Jika anda merasa tutorial ini berguna, luangkan waktu anda sejenak untuk berdoa bagi
+kesejahteraan dan kemakmuran bangsa Indonesia.
+<*> Tutorial ini merupakan proyek pembuatan panduan terintegrasi untuk training Linux
+Administrator dan training Migrasi Windows Linux pada Excellent Infotama Kreasindo. Silakan
+klik http://www.vavai.biz jika anda berminat mengikuti training tentang Linux Server, Virtualisasi,
+Clustering & High Availability Server dan Zimbra Mail Server.
+*******
+Jika anda memiliki pertanyaan mengenai artikel ini, anda dapat menghubungi :
+Muhammad Rivai Andargini
+http://www.vavai.com
+Email : v avai@vavai.com
+Panduan Instalasi openSUSE 11.2 untuk ServerCopyright ©2010 http://www.vavai.com
+Halaman 20 dari 21 Halaman
+Muhammad Rivai Andargini AKA Masim Vavai Sugianto. Lahir dan besar di Tambun-
+Bekasi (disini aku ada, besar, nakal dan mimpi-mimpi... :-) ) 17 Mei 1976. Sewaktu SMP
+mengelola majalah dinding dengan cerpen pertama berjudul “Si Rivai”. Nama Rivai diambil
+dari nama pengarang buku bagus tentang kisah masa kecil di pedesaan, Mohammad
+Riva.
+Saya menggunakan nama itu sebagai nama tokoh cerpen buatan saya sendiri semasa
+SMP, Muhammad Rivai. Saya lebih suka menggunakan nama Muhammad instead of
+Mohamad, Muhammad dengan double M pada bagian tengah karena berasal dari nama
+Nabi Muhammad SAW. Untuk Rivai ditulis menggunakan V, bukan F karena V
+melambangkan kestabilan (meski saya teteup bisa melafalkan huruf F dengan baik, “Siapa
+bilang orang Sunda tidak bisa menggunakan huruf F, itu Pitnah” :-P
+Ciri-ciri dan pola kehidupan Muhammad Rivai dalam cerpen diambil dari keseharian saya,
+sehingga lama-lama sering saya gunakan sebagai nama samaran jika kenalan, utamanya
+dengan cewek-cewek semasa SMP, SMA dan sewaktu kuliah :-D . Nama samaran secara
+lengkap adalah Muhammad Rivai Andargini, Andar berasal dari nama “Anderson”, dari
+Richard Dean Anderson si Mac Gyver, serial TV yang sangat populer semasa TV swasta
+pertama, RCTI muncul di Indonesia.
+Nama Muhammad Rivai terbawa sampai saya kemudian menikah dan punya anak. Saat
+anak pertama saya di USG, dokter mengatakan bahwa jenis kelamin anak saya adalah
+perempuan, jadi saya dan isteri menyiapkan nama perempuan : “Riska Aura Rasya”
+sebagai nama si bayi. Ternyata saat lahir jenis kelaminnya laki-laki sehingga isteri bingung
+karena tidak menyiapkan nama untuk putra. Saat bertanya kepada saya, namanya nanti
+Panduan Instalasi openSUSE 11.2 untuk ServerCopyright ©2010 http://www.vavai.com
+Halaman 21 dari 21 Halaman
+siapa, sambil tertawa saya bilang, “Muhammad Rivai” :-)
+Isteri setuju dengan nama Muhammad Rivai tapi untuk Andargini diganti menjadi Alifianto
+yang berarti anak pertama (Alif). Karena ada tetangga yang namanya pak Rifa’i yang
+tindak-tanduknya sering jadi pembicaraan negatif, isteri dan keluarga tidak ingin ia
+dipanggil jadi nama “Rifa’i” sehingga saya menggunakan nama panggilan khas, “Vavai”,
+nama panggilan yang sama yang saya gunakan sebagai nama panggilan samaran sejak
+SMP. Nama Vavai ini juga yang digunakan sebagai call sign dan nick name saya,
+termasuk nama untuk domain (vavai.com, vavai.net, vavai.info, vavai.biz).
+Jadi saat ini ada 2 nama mirip dikeluarga kecil kami, yaitu Muhammad Rivai Andargini
+dengan panggilan Vavai untuk saya dan Muhammad Rivai Alifianto dengan nama
+panggilan Zeze Vavai (waktu masih bayi dipanggil dede bayi atau dede Vavai). Kalau ada
+yang mencari saya, “Bu, Vavai-nya ada ?”, sama keluarga saya bisa jadi akan ditunjuk ke
+Zeze Vavai yang sedang bermain :-)
+Saya beraktivitas pada Komunitas openSUSE Indonesia http://www.opensuse.or.id dan
+menjadi ketua Komunitas pada periode 2007-2008. Untuk periode selanjutnya saya
+membantu ketua baru sebagai penasihat. Saya juga aktif pada Komunitas Zimbra
+Indonesia http://www.zimbra.web.id.
+Keseharian saya dapat
+http://www.vavai.biz
+dimonitor
+pada
+website
+http://www.vavai.com
+Panduan Instalasi openSUSE 11.2 untuk Server
